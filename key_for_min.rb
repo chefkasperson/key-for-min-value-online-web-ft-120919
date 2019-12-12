@@ -2,10 +2,13 @@
 # Given a hash with numeric values, return the key for the smallest value
 
 def key_for_min_value(name_hash)
-  value = 100000000
+  value = nil
   key = nil
   name_hash.each {|k, v|
-    if v < value
+    if v == nil
+      value = v
+      key = k
+    elsif v < value
       value = v
       key = k
     end
